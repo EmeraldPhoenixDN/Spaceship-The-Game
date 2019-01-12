@@ -1,0 +1,20 @@
+﻿  Main.cpp
+Main.cpp(32): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+Main.cpp(40): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+Main.cpp(69): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+Main.cpp(71): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+Main.cpp(98): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+Main.cpp(99): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+Main.cpp(124): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+Main.cpp(125): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+Main.cpp(129): warning C4305: *=: усечение из "double" к "float"
+Main.cpp(130): warning C4305: *=: усечение из "double" к "float"
+Main.cpp(134): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
+Main.cpp(135): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
+Main.cpp(139): warning C4305: *=: усечение из "double" к "float"
+Main.cpp(140): warning C4305: *=: усечение из "double" к "float"
+Main.cpp(213): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+Main.cpp(220): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+Main.cpp(226): warning C4390: ";": обнаружен пустой контролируемый оператор; это правильно?
+Main.cpp(249): warning C4305: аргумент: усечение из "double" к "float"
+Main.cpp(325): fatal error C1075: конец файла обнаружен ранее, чем левая фигурная скобка "{" в "Main.cpp(212)"
