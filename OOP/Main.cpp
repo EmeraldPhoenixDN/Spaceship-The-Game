@@ -5,12 +5,12 @@
 #include <list>
 #pragma warning(disable : 4996)
 using namespace sf;
-
+//Screen parameters: W - width, H - height
 const int W = 1920;
 const int H = 1080;
 
 float DEGTORAD = 0.017453f;
-
+//Animation - Movement animation 
 class Animation
 {
 public:
@@ -49,7 +49,7 @@ public:
 
 };
 
-
+//Entity - ojects parameters 
 class Entity
 {
 public:
@@ -89,7 +89,7 @@ public:
 	virtual ~Entity() {};
 };
 
-
+//Asteroid - all asteroid info 
 class asteroid : public Entity
 {
 public:
@@ -107,6 +107,7 @@ public:
 
 	
 int maxSpeed = 2;
+//player - all player info
 class player : public Entity
 {
 public:
@@ -156,7 +157,7 @@ public:
 
 };
 
-
+//Describing of interaction between spaceship and asteroid
 bool isCollide(Entity *a, Entity *b)
 {
 
@@ -166,21 +167,21 @@ bool isCollide(Entity *a, Entity *b)
 
 }
 
-
+//Program main menu
 void menu(RenderWindow & window) {
 	Texture menuTexture1, menuTexture2, menuTexture3,  menuBackground;
 	menuTexture1.loadFromFile("images/NewGame.png");
 	menuTexture3.loadFromFile("images/Exit.png");
 	menuBackground.loadFromFile("images/background2.jpg");
 
-	Sprite menu1(menuTexture1), menu3(menuTexture3), menuBg(menuBackground);
+	Sprite menu1(menuTexture1), menu3(menuTexture3), menuBg(menuBackground);//pinned images
 	bool isMenu = 1;
 	int menuNum = 0;
 	menu1.setPosition(100, 30);
 	menu3.setPosition(100, 150);
 	menuBg.setPosition(345, 0);
 
-	//////////////////////////////Главное Меню///////////////////
+	//////////////////////////////Menu choice///////////////////
 	while (isMenu)
 	{
 		menu1.setColor(Color::Yellow);
@@ -193,7 +194,7 @@ void menu(RenderWindow & window) {
 
 		if (Mouse::isButtonPressed(Mouse::Left))
 		{
-			if (menuNum == 1) isMenu = false;//если нажали первую кнопку, то выходим из меню 
+			if (menuNum == 1) isMenu = false;
 			if (menuNum == 3) { window.close(); isMenu = false; }
 
 		}
@@ -207,7 +208,7 @@ void menu(RenderWindow & window) {
 	////////////////////////////////////////////////////
 }
 
-
+//main - attached files and game controls
 int main()
 {
 	srand(time(0));
@@ -261,7 +262,7 @@ int main()
 	player *p = new player();
 	p->settings(sPlayer, 200, 200, 270, 20);
 	entities.push_back(p);
-	/////Основной цикл/////
+	/////Game controls description/////
 	while (app.isOpen())
 	{
 		Event event;
